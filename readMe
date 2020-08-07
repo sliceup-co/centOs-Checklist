@@ -1,0 +1,40 @@
+cent os aka centos aka centOs / Updated checklist with examples
+
+edit /etc/hosts  ????
+
+
+if ip not reachable:
+config: /etc/hostname
+yum install rsync
+yum install nano
+
+Check and then disable firewall:
+systemctl status firewalld
+systemctl disable firewalld
+systemctl stop firewalld
+systemctl status firewalld
+
+Example static IP address configuration
+TYPE=Ethernet
+# Static IP Address #
+BOOTPROTO=static
+# Server IP #
+IPADDR=10.12.2.53
+# Netmask #
+NETMASK=255.255.255.0
+# Default Gateway IP #
+GATEWAY=10.12.2.1
+# DNS Servers #
+DNS1=8.8.8.8
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+# Disable ipv6 #
+IPV6INIT=no
+# Device Name #
+NAME=eth0
+DEVICE=eth0
+# Optional – This is system specific and can be created using ‘uuidgen enp0s3’ command #
+UUID=5556fdc1-a65f-421f-9415-0a7135bcfcc7
+# Activate on Boot #
+ONBOOT=yes
+
