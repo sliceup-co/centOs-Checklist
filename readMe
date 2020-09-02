@@ -14,12 +14,19 @@ systemctl disable firewalld
 systemctl stop firewalld
 systemctl status firewalld
 
-Example static IP address configuration
+
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+NAME="eth0"
+DEVICE="eth0"
+ONBOOT="yes"
 TYPE=Ethernet
+
 # Static IP Address #
 BOOTPROTO=static
 # Server IP #
-IPADDR=10.12.2.53
+IPADDR=10.12.2.22x
 # Netmask #
 NETMASK=255.255.255.0
 # Default Gateway IP #
@@ -30,11 +37,5 @@ DEFROUTE=yes
 IPV4_FAILURE_FATAL=no
 # Disable ipv6 #
 IPV6INIT=no
-# Device Name #
-NAME=eth0
-DEVICE=eth0
-# Optional – This is system specific and can be created using ‘uuidgen enp0s3’ command #
-UUID=5556fdc1-a65f-421f-9415-0a7135bcfcc7
-# Activate on Boot #
-ONBOOT=yes
 
+#UUID
